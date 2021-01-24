@@ -7,7 +7,6 @@
 https://maps.googleapis.com/maps/api/directions/json?origin=Zion+National+Park&destination=Las+Vegas&mode=bicycling&key=AIzaSyBOUj57MCaYkCLM6j954ePfTXqgS5Td0ew
 
 ##Valid Response from JSON
-<!--
 {
    "geocoded_waypoints" : [
       {
@@ -2006,7 +2005,7 @@ https://maps.googleapis.com/maps/api/directions/json?origin=Zion+National+Park&d
                      "html_instructions" : "Slight \u003cb\u003eleft\u003c/b\u003e to stay on \u003cb\u003eLas Vegas Blvd N\u003c/b\u003e",
                      "maneuver" : "turn-slight-left",
                      "polyline" : {
-                        "points" : "mn{{E`cv}TJCT@N?"
+                        "points" : "mn{{E`cv}TJCT@N?"}}
                      },
                      "start_location" : {
                         "lat" : 36.1906347,
@@ -2175,4 +2174,4 @@ https://maps.googleapis.com/maps/api/directions/json?origin=Zion+National+Park&d
    ],
    "status" : "OK"
 }
--->
+
