@@ -13,6 +13,7 @@
       #map {
         height: 100%;
       }
+	  
 	h1, h2 {font-family: arial; color: gray; text-align: center;}
 
       /* Optional: Makes the sample page fill the window. */
@@ -30,9 +31,11 @@
       function initMap() {
         map = new google.maps.Map(document.getElementById("map"), {
           center: { lat: 48.907248, lng:-87.756108},
-          zoom: 12,
+          zoom: 14,
         });
+		map.setMapTypeId('satellite');
       }
+	  
     </script>
   </head>
   <body>
