@@ -7,6 +7,7 @@
 https://maps.googleapis.com/maps/api/directions/json?origin=Zion+National+Park&destination=Las+Vegas&mode=bicycling&key=AIzaSyBOUj57MCaYkCLM6j954ePfTXqgS5Td0ew
 
 ##Valid Response from JSON
+<!--
 {
    "geocoded_waypoints" : [
       {
@@ -2174,3 +2175,4 @@ https://maps.googleapis.com/maps/api/directions/json?origin=Zion+National+Park&d
    ],
    "status" : "OK"
 }
+-->
