@@ -1,4 +1,4 @@
-**Weel 1 - DirectionsAPI Example (JSON Return)**
+**Week 1 - DirectionsAPI Example (JSON Return)**
 #From Zion National Park, Utah
 #To Las Vegas, Nevada
 #via bicycle
@@ -2005,7 +2005,7 @@ https://maps.googleapis.com/maps/api/directions/json?origin=Zion+National+Park&d
                      "html_instructions" : "Slight \u003cb\u003eleft\u003c/b\u003e to stay on \u003cb\u003eLas Vegas Blvd N\u003c/b\u003e",
                      "maneuver" : "turn-slight-left",
                      "polyline" : {
-                        "points" : "mn{{E`cv}TJCT@N?"}}
+                        "points" : "mn{{E`cv}TJCT@N?"
                      },
                      "start_location" : {
                         "lat" : 36.1906347,
@@ -2174,4 +2174,3 @@ https://maps.googleapis.com/maps/api/directions/json?origin=Zion+National+Park&d
    ],
    "status" : "OK"
 }
-
