@@ -1,1 +1,42 @@
-
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tutorial 1</title>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBOUj57MCaYkCLM6j954ePfTXqgS5Td0ew&callback=initMap&libraries=&v=weekly"
+      defer
+    ></script>
+    <style type="text/css">
+      /* Set the size of the div element that contains the map */
+      #map {
+        height: 800px;
+        /* The height is 400 pixels */
+        width: 100%;
+        /* The width is the width of the web page */
+      }
+    </style>
+    <script>
+      // Initialize and add the map
+      function initMap() {
+        // The location of Lakehead University
+        const ThunderBay = { lat: 48.4187, lng: -89.2573 };
+        // The map, centered at Lakehead University
+        const map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 14,
+          center: ThunderBay,
+        });
+        // The marker, positioned at Lakehead University
+        const marker = new google.maps.Marker({
+          position: ThunderBay,
+          map: map,
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <h3>My Google Maps Demo</h3>
+	<h4>Tutorial 1 - Lakehead University</h4>
+    <!--The div element for the map -->
+    <div id="map"></div>
+  </body>
+</html>
