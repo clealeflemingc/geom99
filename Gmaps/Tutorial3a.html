@@ -1,1 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Tutorial 3a</title>
+	
+	<script
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBOUj57MCaYkCLM6j954ePfTXqgS5Td0ew&callback=initMap&libraries=&v=weekly"
+	defer></script>
+	
+	<style type="text/css">
+	/* Set the size of the div element that contains the map */
+	#map {
+		height: 100%;}
+	/* Optional: Makes the sample page fill the window. */
+	html, body {
+		height: 90%;
+		width: 90%;
+		margin: auto;
+		padding: 0;}
+	h1, h2 {font-family: arial; color: gray; text-align: center;}
+	</style>
+
+	<script>
+	let map;
+	function initMap() {
+	map = new google.maps.Map(document.getElementById("map"), {
+		zoom: 2,
+		center: new google.maps.LatLng(2.8, -187.3),
+		mapTypeId: "terrain",
+	});
+	// Create a <script> tag and set the USGS URL as the source.
+	const script = document.createElement("script");
+	// This example uses a local copy of the GeoJSON stored at
+	// http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.geojsonp
+	script.src =
+	"https://developers.google.com/maps/documentation/javascript/examples/json/earthquake_GeoJSONP.js";
+	document.getElementsByTagName("head")[0].appendChild(script);
+	}
+	// Loop through the results array and place a marker for each
+	// set of coordinates.
+	const eqfeed_callback = function (results) {
+	for (let i = 0; i < results.features.length; i++) {
+		const coords = results.features[i].geometry.coordinates;
+		const latLng = new google.maps.LatLng(coords[1], coords[0]);
+		new google.maps.Marker({
+		position: latLng,
+		map: map,});
+	}
+	};
+	</script>
+	</head>
+	
+	<body>
+	<h1>My Google Maps Demo</h1>
+	<h2>Tutorial 3A - Basic Marker</h2>
+	<!--The div element for the map -->
+	<div id="map"></div>
+	</body>
+</html>
+
+
+
 
