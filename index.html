@@ -1,24 +1,73 @@
 <!DOCTYPE html>
 <html>
-  <head>
-  <title>Week 1 and 2</title>
-  <style>
-  h1, p { color: gray; font-family: arial;}
-  body {background-color: WhiteSmoke;}
-  </style>  
-	
-  </head>
-  <body>
-  <h1>Week 1 and 2 Index</h1>
-  
-  <p><a href="week1sharks.html">Shark Spotters</a></p>
-  <p><a href="week1helloworld">Hello World</a></p>
-  <p><a href="week1directions.html">Directions API</a></p>
-  <p><a href="week1places.html">Places API</a></p>
-  <p><a href="Gmaps/Tutorial1.html">Tutorial 1</a><p>
-  <p><a href="Gmaps/Tutorial2.html">Tutorial 2</a><p>
-  <p><a href="Gmaps/Tutorial3a.html">Tutorial 3a</a><p>
-  <p><a href="Gmaps/Tutorial3b.html">Tutorial 3b</a><p>
-  <p><a href="Gmaps/Tutorial3c.html">Tutorial 3c</a><p>
-  </body>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Nav bar buttons template from: https://www.w3schools.com/howto/howto_css_dropdown.asp-->
+<style>
+.dropdowns {text-align: center;}
+
+
+.dropbtn {
+  background-color: white-smoke;
+  color: gray;
+  padding: 25px;
+  font-size: 16px;
+  border: none;}
+
+.dropdown {
+  position: relative;
+  display: inline-block;}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: gray;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;}
+
+.dropdown-content a {
+  font-family: arial;
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;}
+
+h1, h2 {font-family: arial; color: gray; text-align: center;}
+
+.dropdown-content a:hover {background-color: black; color: white;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: white;}
+</style>
+</head>
+<body>
+
+<h1>GEOM 99</h1>
+<h2>Week 1 and 2 Work</h2>
+
+<div class="dropdowns">
+<div class="dropdown">
+  <button class="dropbtn">Week1</button>
+  <div class="dropdown-content">
+	  <a href="week1sharks.html">Shark Spotters</a>
+	  <a href="week1helloworld">Hello World</a>
+	  <a href="week1directions.html">Directions API</a>
+	  <a href="week1places.html">Places API</a>
+  </div>
+</div>
+
+<div class="dropdown">
+  <button class="dropbtn">Week2</button>
+  <div class="dropdown-content">
+	  <a href="Gmaps/Tutorial1.html">Tutorial 1</a>
+	  <a href="Gmaps/Tutorial2.html">Tutorial 2</a>
+	  <a href="Gmaps/Tutorial3a.html">Tutorial 3a</a>
+	  <a href="Gmaps/Tutorial3b.html">Tutorial 3b</a>
+	  <a href="Gmaps/Tutorial3c.html">Tutorial 3c</a>
+  </div>
+</div>
+</div>
+</body>
 </html>
