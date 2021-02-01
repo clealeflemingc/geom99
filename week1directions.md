@@ -5,7 +5,8 @@
 [URL to Directions API Webpage](https://maps.googleapis.com/maps/api/directions/json?origin=Zion+National+Park&destination=Las+Vegas&mode=bicycling&key=AIzaSyBOUj57MCaYkCLM6j954ePfTXqgS5Td0ew)
 
 #JSON Response:
-```json {
+```json 
+{
    "geocoded_waypoints" : [
       {
          "geocoder_status" : "OK",
@@ -2171,4 +2172,5 @@
       }
    ],
    "status" : "OK"
-}```
+}
+```
