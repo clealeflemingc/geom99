@@ -2,7 +2,14 @@
 <html>
 	<head>
 	<title>Tutorial 3a</title>
-	
+	<script>
+	// Create a script tag and set the USGS URL as the source.
+     var script = document.createElement('script');
+
+     script.src = 'https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.geojsonp';
+     document.getElementsByTagName('head')[0].appendChild(script);
+	 </script>
+	 
 	<script
 	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBOUj57MCaYkCLM6j954ePfTXqgS5Td0ew&callback=initMap&libraries=&v=weekly"
 	defer></script>
@@ -28,13 +35,6 @@
 		center: new google.maps.LatLng(2.8, -187.3),
 		mapTypeId: "terrain",
 	});
-	// Create a <script> tag and set the USGS URL as the source.
-	const script = document.createElement("script");
-	// This example uses a local copy of the GeoJSON stored at
-	// http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.geojsonp
-	script.src =
-	"https://developers.google.com/maps/documentation/javascript/examples/json/earthquake_GeoJSONP.js";
-	document.getElementsByTagName("head")[0].appendChild(script);
 	}
 	// Loop through the results array and place a marker for each
 	// set of coordinates.
@@ -57,7 +57,6 @@
 	<div id="map"></div>
 	</body>
 </html>
-
 
 
 
