@@ -1,29 +1,60 @@
 <!DOCTYPE html>
 <html>
-  <head>
-  <title>Sedona, AZ Exploring</title>
-  <style> 
-  .map {text-align: center; margin: 20px;}
-  h1, p {font-family: arial;
-  color: gray;}
-  </style> 
-  </head>
-  
-  <!--Creating Travel Isocrone maps was inspired by: http://www.mkrgeo-blog.com/how-to-make-isochrone-map-in-google-mymaps-quickly/--> 
-  <!--Isochomes were created with: https://maps.openrouteservice.org/directions?n1=34.863398&n2=-111.793442&n3=10&b=0&c=0&k1=en-US&k2=km-->
-  <!--GeoJSON files were converted to KML with: http://geojson.io/#map=2/20.0/0.0-->
-  <body>
-  <div class="map">
-  <h1>Sedona, AZ - Travel Distance Isochrone</h1>
-  <p>Map Description</p>
-  <iframe src="https://www.google.com/maps/d/embed?mid=1p_8HGWo0ogCUECOtEqqYjmdD4dZqV6h_" width="600" height="500"></iframe>
-  <iframe src="https://www.google.com/maps/d/embed?mid=1UNja2lcXslzYqeKLAZ9uGDTDf7PdkSnZ" width="600" height="500"></iframe>
-  </div>
-   
-  <div class="map">
-  <h1>Sedonam, AZ - Trail Heads</h1>
-  <p>Map Description</p>
-  <iframe src="https://www.google.com/maps/d/embed?mid=1hGHoGSsvwj7Jh1M4CQUrieb3ulku2Erc" width="1000" height="700"></iframe>
-  </div>
-  </body>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sedona, AZ Exploring</title>
+<style> 
+.pagewidth {width: 75%; margin-left: 10%;}
+.map {text-align: center; margin: 20px;}
+img {float: left; padding-right: 30px;}
+h1 {font-family: "lucida console"; font-size: 60px; color: #005e86; text-align: center;}
+h2 {font-family: "lucida console"; color: gray; text-align: center; padding-top: 30px; border-top: 2px #005e86 solid;}
+p {font-family: "Verdana"; line-height: 30px; color: gray; text-align: left; padding-bottom: 15px; padding-left:30px; padding-right: 30px;}
+#header {padding: 30px; background-color: #e6ddd6; border-bottom: 5px #005e86 solid;}
+</style> 
+</head>
+
+<body>
+<div class="pagewidth">
+<div id="header">
+<h1>Visit Sedona!</h1>
+</div>
+
+<div class="map">
+<!--Content Inspired From: https://www.go-arizona.com/Sedona/gclid:Cj0KCQiA0-6ABhDMARIsAFVdQv8yPIVa0Weys87wtcyqP-rbdFNDdmDPE62nfNQPlM8Os3hLhruovDEaArFwEALw_wcB/utm_campaign:city/utm_medium:ppc/utm_source:google/utm_term:sedona/# -->
+<p><img src="Sedona/courthouse_300x200.jpg" alt="Sedona Rocks" width="300" height="200">Sedona, Arizona is a popular tourist destination known for its world-renowned sandstone rock formations and its vibrant art scene. The relaxed vibe and quaint, but stylish, atmosphere of the city offers a little something for everyone. Does the scenery feel familiar? Its likely because the breath-taking and rugged landscapes have provided the backdrop to many famous Western movies! It is an outdoor lover’s paradise with ample hiking, biking, rafting, golfing, and climbing opportunities. The picturesque scenery, serenity and enchantment of Sedona has made it a spiritual destination for many visitors. </p>
+
+<h2>Sight Seeing</h2>
+<!--Content Inspired From: https://visitsedona.com/spiritual-wellness/what-is-a-vortex/#:~:text=is%20a%20Vortex%3F-,What%20is%20a%20vortex%3F,seems%20especially%20alive%20with%20energy.-->
+<p>Sedona has a lot to offer, but most notably is the presence of "vortexes" thought to be swirling centers of energy that are conductive to healing, meditation and self-exploration. Visitors travel from across the world to experience the cosmic forces that are said to radiate from the red-rock formations. While all of Sedona is a vortex, there are six locations where the healing forces are thought to be the strongest, with each radiating a different type of energy. Those who visit the vortexes to meditate and find healing often leave feeling inspired, uplifted, and recharged. Even if you are not a believer in comic forces, there is no doubt that you will feel connected to nature after visiting these picturesque sites.</p>
+<p>In addition to the vortex locations, there are several other natural landmarks that are worth a mention. Devil's Bridge is a popular photo-op location famous for its large natural arching sandstone bridge. If you are looking for a place to cool off from the desert heat, West Fork Trail, Seven Sacred Pools, and Oak Creek Canyon all provide access to water for wading.</p>
+<p>Sedona is surrounded by two State Parks, Slide Rock State Park to the north and Red Rock State Park to the south-west. The parks aim to preserve the natural landscape, provide education to visitors, and promote safe and environmentally friendly recreational opportunities. </p>
+<p>Click on the icons in the interactive map below to read a description about each landmark and view a photo!</p>
+<iframe src="https://www.google.com/maps/d/embed?mid=1hGHoGSsvwj7Jh1M4CQUrieb3ulku2Erc" width="1000" height="800"></iframe>
+</div>
+
+<div class="map">
+<h2>Day Tripping</h2>
+<!--Creating Travel Isocrone maps was inspired by: http://www.mkrgeo-blog.com/how-to-make-isochrone-map-in-google-mymaps-quickly/--> 
+<!--Isochones were created with: https://maps.openrouteservice.org/directions?n1=34.863398&n2=-111.793442&n3=10&b=0&c=0&k1=en-US&k2=km-->
+<!--GeoJSON files were converted to KML with: http://geojson.io/#map=2/20.0/0.0-->
+<p>Sedona is a great base camp location for day-trip adventures. With ample hiking trails, historical sites, and adventure tour packages available located within driving distance from the city center, you are sure to find something fun for the whole family! </p>
+<p>Wondering where you can travel for a day trip? Check out the isochrone maps below that show areas nearby within 100 km driving distance and within 1 hour travel time from downtown Sedona. If you are looking for a shorter trip, select the legend to highlight areas reachable within specific distances or times. All locations are easily accessible for day use, with plenty of time to return for an evening spent exploring Sedona's entertainment options. </p>
+<iframe src="https://www.google.com/maps/d/embed?mid=1p_8HGWo0ogCUECOtEqqYjmdD4dZqV6h_" width="600" height="500"></iframe>
+<iframe src="https://www.google.com/maps/d/embed?mid=1UNja2lcXslzYqeKLAZ9uGDTDf7PdkSnZ" width="600" height="500"></iframe>
+</div>
+
+<div class="map">
+<h2>Explore Downtown</h2>
+<!--Content Inspired From: https://verdevalleynatgeo.com/entries/sedona-main-street/010dfbbd-e76e-48dd-855f-32c52de4da84-->
+<p>In addition to the hiking and outdoor activities available in the area, Sedona also has a quaint "Main Street" which features cafes, restaurants, spas, art exhibits, tourist companies, and museums. The downtown area is host to many free community events throughout the year. There is ample free parking available, however during festivals these spaces can fill up quickly!</p>
+<p>The buildings on Main Street are designed to mimic the surrounding geological features and blend in with the landscape. Evidence of Sedona's large artist population can be seen by the number of public art installations on Main Street including sculptures, music, and murals. </p>
+<p>Experience Sedona's humming downtown, which is backdropped by scenic red-rock mesas, from the comfort of your home with the Google Street View map inset below.</p>
+<iframe width="1000" height="700" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/streetview?location=34.8697%2C-111.7610&key=AIzaSyBOUj57MCaYkCLM6j954ePfTXqgS5Td0ew" allowfullscreen></iframe>
+</div>
+
+</div>
+</body>
 </html>
