@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>ArcGIS API for JavaScript Tutorials: Display a scene</title>
+  <style>
+    html, body, #viewDiv {
+      padding: 0;
+      margin: 0;
+      height: 100%;
+      width: 100%;
+    }
+	h1 {color: gray; font-family: arial; text-align: center;}
+  </style>
+
+  <link rel="stylesheet" href="https://js.arcgis.com/4.18/esri/themes/light/main.css">
+  <script src="https://js.arcgis.com/4.18/"></script>
+
+  <script>
+    require([
+      "esri/config",
+      "esri/Map",
+      "esri/views/SceneView"
+  ], function(esriConfig,Map, SceneView) {
+
+    esriConfig.apiKey = "AAPKe6d2a84ec2a44709a647f63d3cb00232bdZAaEthTLlD2qnnhX9nF9yIBRsp_gpaJLFZLhU4q4ANHymAwn2QcioT5nRGyZSu";
+
+    const map = new Map({
+      basemap: "arcgis-imagery", //Basemap layer service
+      ground: "world-elevation", //Elevation service
+    });
+
+    const view = new SceneView({
+      container: "viewDiv",
+      map: map,
+      camera: {
+        position: {
+          x: -119.570, //Longitude
+          y: 37.695, //Latitude
+          z: 6000 //Meters
+        },
+        tilt: 50,
+		heading: 350,
+      }
+      });
+
+    });
+  </script>
+
+</head>
+<body>
+<h1>Week4 - Scene View of Yosemite Valley, CA</h1>
+  <div id="viewDiv"></div>
+</body>
+</html>
