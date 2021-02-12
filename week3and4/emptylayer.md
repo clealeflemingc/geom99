@@ -6,5 +6,5 @@
 ### Rest URL: https://services1.arcgis.com/pMeXRvgWClLJZr3s/arcgis/rest/services/geom99treelayer/FeatureServer?token=
 
 ## ArcGIS Online Template
-### Item ID URL:
-### Rest URL: 
+### Item ID URL: https://fleming.maps.arcgis.com/home/item.html?id=cd40bcaefe824fffb2280ebb990207ac
+### Rest URL: https://services1.arcgis.com/pMeXRvgWClLJZr3s/arcgis/rest/services/GEOM99treeAGOLTemplate/FeatureServer?token=
