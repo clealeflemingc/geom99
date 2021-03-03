@@ -1,0 +1,155 @@
+<html>
+<head>
+  <meta name="description" content="DevLab: Configure a popup">
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+  <title>Week6 Task 4 - Map of Canada for Children</title>
+  <!--ArcGIS API for JavaScript Tutorials: Display a pop-up (JSAPI): https://developers.arcgis.com/javascript/latest/display-a-pop-up/-->
+  <style>
+   .pagewidth {width: 75%; margin-left: 10%; background-color: 	  #f2f7f2;}
+	#viewDiv {
+      padding: 2%;
+      height: 80%;
+      width: 90%;}
+	h1 {text-align: center; color: #47666b; font-size: 60px; font-family: arial;}
+	h2 {font-family: arial; color:  #47666b; text-align: center; border-top: solid; padding-top: 30px;}
+	p {text-align: left; padding: 10px; font-family: arial; color: #282828;}
+	.paragraph{margin-left: 10%; margin-right: 10%; font-size: 20px;}
+	
+
+	ol {background: #D3D3D3;
+		padding: 20px;
+		width: 50%;
+		margin-left: 23%}
+	ol li {background: #F8F8F8;
+		font-family: arial;
+		font-size: 18px;
+		color: #282828;
+		padding: 5px;
+		margin-left: 35px;
+		margin-right:35px;
+		text-align: left;}
+  </style>
+  <link rel="stylesheet" href="https://js.arcgis.com/4.18/esri/themes/light/main.css">
+  <script src="https://js.arcgis.com/4.18/"></script>
+</head>
+
+ <script>
+
+  require([
+      "esri/config",
+      "esri/Map",
+      "esri/views/MapView",
+      "esri/layers/FeatureLayer"
+    ],
+
+    function(esriConfig,Map, MapView, FeatureLayer){
+
+     esriConfig.apiKey = "AAPKe6d2a84ec2a44709a647f63d3cb00232bdZAaEthTLlD2qnnhX9nF9yIBRsp_gpaJLFZLhU4q4ANHymAwn2QcioT5nRGyZSu";
+
+      const map = new Map({
+        basemap: "arcgis-light-gray" //Basemap layer service
+      });
+
+      const view = new MapView({
+        container: "viewDiv",
+        map: map,
+        center: [-80, 68], //Longitude, latitude
+        zoom: 2
+      });
+
+
+      // Define popup for Provinces and Territories
+      const popupprovincesterritories = {
+        "title": "{PRENAME}",
+        "content": [{
+          "type": "fields",
+          "fieldInfos": [
+            {
+              "fieldName": "PREABBR",
+              "label": "Abbreviation",
+              "isEditable": true,
+              "tooltip": "",
+              "visible": true,
+              "format": null,
+              "stringFieldOption": "text-box"
+            },            
+			{
+              "fieldName": "PRFNAME",
+              "label": "Name (French)",
+              "isEditable": true,
+              "tooltip": "",
+              "visible": true,
+              "format": null,
+              "stringFieldOption": "text-box"
+            },
+
+			{
+             "fieldName": "Shape_STAr",
+             "label": "Area (m2)",
+             "visible": true,
+             "format": {
+                "places": 0,
+                "digitSeparator": true
+              },
+              "stringFieldOption": "text-box"
+            },
+			{
+             "fieldName": "Shape_STLe",
+             "label": "Perimeter (m)",
+             "visible": true,
+             "format": {
+                "places": 0,
+                "digitSeparator": true
+              },
+              "stringFieldOption": "text-box"
+            }
+          ]
+        }]
+      }
+
+      const provincesterritories = new FeatureLayer({
+        url: "https://luna.flemingcollege.ca/arcgis/rest/services/Geom99lab2/ClealeCanada/MapServer/0",
+        outFields: ["TYPE","PARK_NAME", "AGNCY_NAME","ACCESS_TYP","GIS_ACRES","TRLS_MI","TOTAL_GOOD","TOTAL_FAIR", "TOTAL_POOR"],
+        popupTemplate: popupprovincesterritories
+      });
+
+      map.add(provincesterritories,0);
+	      });
+  </script>
+
+</head>
+<body>
+<div class="pagewidth">
+<h1>Get to know Canada!</h1>
+<div class="paragraph">
+<p>Canada is the second largest country in the world. The country covers diverse landscapes including rugged ocean coastlines, tall mountain ranges, flat prairie farmland, arctic tundra and urban settings.</p>
+<p></p>
+</div>
+<h2>Canada by Area.</h2>
+<div class="paragraph">
+<p>Discover more about each of Canada's provinces and territories by making a selection on the map below to display a pop-up window. Explore the area and perimeter of each province. </p>
+<p>Can you find which of Canada's provinces or territories is the <b>smallest</b> by area (hint: East Coast)? Which is the <b>largest</b> (hint: look to the North)? </p>
+<p>Click "Zoom to" in the pop-up window to explore each province and territory at a closer scale.</p>
+</div>
+<div id="viewDiv"></div>
+
+<h2>Top 10 Canadian Geography Facts.</h2>
+<!--Top 10 Facts Aquired from: https://livelearn.ca/article/about-canada/10-amazing-facts-about-canadas-geography/-->
+<ol>
+  <li>Canada has the longest coastline in the world</li>
+  <li>There are millions of lakes in Canada</li>
+  <li>The world’s oldest known rocks can be found here</li>
+  <li>We have a version of the Dead Sea (i.e., Little Manitou Lake in Saskatchewan)</li>
+  <li>Regina is the geographical centre of North America</li>
+  <li>Six Canadian cities have more than 1 million residents</li>
+  <li>Nunavut is the largest and PEI is the smallest of the provinces and territories</li>
+  <li>Largest source of freshwater in the world</li>
+  <li>You’ll find the largest island within an island here</li>
+  <li>Mount Logan in Yukon is Canada’s tallest mountain</li>
+</ol>
+</div>
+<p>List of facts retreived from: <a href="https://livelearn.ca/article/about-canada/10-amazing-facts-about-canadas-geography/">https://livelearn.ca/article/about-canada/10-amazing-facts-about-canadas-geography/</a></p>
+
+</body>
+</html>
